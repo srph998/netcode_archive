@@ -1,0 +1,55 @@
+// INFO
+Name: Project FMAN
+Version: v.0.1 - Base Alpha
+Written by: hu5hbot
+
+Language: C / Raw
+Short: Base version since tracking changes & development.
+
+// DESCRIPTION
+This is the base V01 (alpha) edition of the server client 
+structure for hu5hbot's "fishing" program. 
+
+// DOCUMENATION
+This is the basic edition of the server client structure for a
+botnet in development by hu5hbot late 2024. The point is that
+the server runs on an isolated recieving machine. This server is
+meant to recieve / write the information given by a client. The
+client is meant to perform tasks on the remote device it is
+located on and send that information back to the server. 
+
+Eventually the point will be that you can slot your own code in
+place of the client's buffer-logic, maybe even able to slot
+it in from the server end so you don't have to re-deploy. I am
+investigating ways to do this that minimize data sent. It is a
+difficult problem, as the basis for how "secure" this program
+will be rides on how much data is sent back and forth that isn't
+the bare minimum. It is difficult to measure how many resources
+an operation uses outside of theoretically how much it "should"
+use. I don't want to have to open/close a file every time it's
+written to and I don't want to have to pipe every inch of data
+back and forth manually.
+
+This program has been through several iterations before this.
+However, I am happy with this version as it is and wish to make
+an effort to preserve it. As well as start documentation so I
+don't lose the direction with the program.
+
+// CHANGELOG
+-Server accepts any number of clients. Output is cleaned as to
+keep load as easy as possible. I'm curious how easy it would be
+to keep track of if hundreds of clients send at once.
+-Server writes data to database files (just text for now)
+-Client can send any amount of information over
+-Prints structure as-ran for both client/server as debug
+
+[UPCOMING]
+-Self destruct (delete executable on remote machine once done)
+-Forensics (tools to gather machine data on the surface)
+-Main (Write a main loop/function for the slotted code)
+-Formatting Data (Format database for easy use / storage)
+-Anonymize (keep the client code as secret as possible)
+-Pentest (use live machines for testing code)
+
+
+last updated 05.12.2024
